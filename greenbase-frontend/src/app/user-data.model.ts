@@ -1,7 +1,11 @@
 export class UserData {
-    name: string = '';
-    email: string = '';
+    firstName: string = '';
+    lastName: string = '';
     notifications: number = 0;
-    imageUrl?: string = '';
     orders: number = 0;
+    email: string = '';
+    phoneNumber: string = '';
+    timezone: string = '';
+    language: string = '';
+    imageUrl?: string = '';
 }

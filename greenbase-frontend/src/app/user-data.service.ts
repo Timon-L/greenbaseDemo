@@ -7,11 +7,15 @@ import { UserData } from './user-data.model';
 })
 export class UserDataService {
   private userDataSource = new BehaviorSubject<UserData>({
-    name: 'Alex Smith',
+    firstName: 'Alex',
+    lastName: 'Smith',
     email: 'AlexSmith@gmail.com',
     notifications: 10,
     imageUrl: './assets/avataaars.png',
-    orders: 16
+    orders: 16,
+    language: 'English',
+    phoneNumber: '123-456-7890',
+    timezone: 'GMT+1',
   });
   currentUserData = this.userDataSource.asObservable();
 
@@ -23,11 +27,15 @@ export class UserDataService {
 
   logout() {
     this.userDataSource.next({
-      name: '',
+      firstName: '',
+      lastName: '',
       email: '',
       notifications: 0,
       imageUrl: '',
-      orders: 0
+      orders: 0,
+      language: '',
+      phoneNumber: '',
+      timezone: '',
     });
   }
 }

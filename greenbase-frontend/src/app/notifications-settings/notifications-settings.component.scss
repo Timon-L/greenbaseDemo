@@ -1,0 +1,48 @@
+.notifications-settings {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .notifications-settings-container{
+        display: flex;
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 16px;
+        justify-content: space-between;
+    }
+
+    mat-list-item {
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .notifications-name,
+    .notifications-description {
+        display: block;
+    }
+
+    .notifications-name {
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    .notifications-description {
+        font-size: 14px;
+        color: #666;
+    }
+
+    mat-slide-toggle {
+        flex-shrink: 0;
+    }
+
+    mat-divider {
+        margin: 0 32px;
+    }
+
+    mat-divider:last-of-type {
+        display: none;
+    }
+}

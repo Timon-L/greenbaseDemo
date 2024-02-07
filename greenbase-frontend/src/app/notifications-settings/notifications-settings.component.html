@@ -1,1 +1,14 @@
-<p>notifications-settings works!</p>
+<mat-list class="notifications-settings">
+    @for (setting of settings; track setting) {
+    <mat-list-item>
+        <div class="notifications-settings-container">
+            <div class="notifications-text">
+                <div class="notifications-name">{{ setting.name }}</div>
+                <div class="notifications-description">{{ setting.description }}</div>
+            </div>
+            <mat-slide-toggle [(ngModel)]="setting.enabled" (change)="toggleSetting(setting)"></mat-slide-toggle>
+        </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    }
+</mat-list>

@@ -1,1 +1,82 @@
-<p>profile-settings works!</p>
+<form [formGroup]="profileForm" (ngSubmit)="saveSettings()">
+    <div class="profile-settings">
+        <div class="profile-settings-text">
+            <p class="header">Profile Details</p>
+            <p>Enter your profile information.</p>
+        </div>
+
+        <div class="profile-image-setting">
+            <p>Profile Image</p>
+            <ngx-dropzone class="dropzone" #dropzone (change)="onSelect($event)">
+                <div class="dropzone-content">
+                    <button (click)="triggerFileInput(dropzone)">Add File</button>
+                    <ngx-dropzone-label>Or drag and drop files</ngx-dropzone-label>
+                </div>
+            </ngx-dropzone>
+        </div>
+
+        <div class="profile-user-details">
+            <div class="row">
+                <div class="input-wrapper">
+                    <div class="header">First Name</div>
+                    <mat-form-field appearance="fill">
+                        <input matInput formControlName="firstName">
+                    </mat-form-field>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="header">Last Name</div>
+                    <mat-form-field appearance="fill">
+                        <input matInput formControlName="lastName">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-wrapper">
+                    <div class="header">Email Address</div>
+                    <mat-form-field appearance="fill">
+                        <input matInput formControlName="email">
+                    </mat-form-field>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="header">Phone Number</div>
+                    <mat-form-field appearance="fill">
+                        <input matInput formControlName="phoneNumber">
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="profile-settings-text">
+            <p class="header">Regional Settings</p>
+            <p>Set your language and timezone</p>
+        </div>
+
+        <div class="profile-user-details">
+            <div class="input-wrapper">
+                <div class="header">Language</div>
+                <mat-form-field appearance="fill">
+                    <mat-select formControlName="language">
+                        <mat-option *ngFor="let language of languages" [value]="language.value">
+                            {{ language.viewValue }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="input-wrapper">
+                <div class="header">Timezone</div>
+                <mat-form-field appearance="fill">
+                    <mat-select formControlName="timezone">
+                        <mat-option *ngFor="let timezone of timezones" [value]="timezone.value">
+                            {{ timezone.viewValue }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</form>
