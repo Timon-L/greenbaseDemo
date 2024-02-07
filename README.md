@@ -5,10 +5,10 @@ This project involves the conversion of a settings page UI design from Figma int
 ## Project Screenshots
 
 
-Settings Profile Page & Notifications Page Conversion:
+### Settings Profile Page & Notifications Page Conversion:<br />
 ![demo of settings page](https://github.com/Timon-L/greenbaseDemo/blob/main/settings_page.gif)
 
-Minising page and dropdown menu:
+### Minising page and dropdown menu:<br />
 ![demo of minising page and dropdown menu](https://github.com/Timon-L/greenbaseDemo/blob/main/responsive.gif)
 
 
