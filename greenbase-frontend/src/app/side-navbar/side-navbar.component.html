@@ -1,8 +1,12 @@
 <mat-drawer-container class="side-navbar-container" autosize>
-    <mat-drawer mode="side" opened="true" class="side-navbar">
+    <mat-drawer #drawer mode="side" opened="true" class="side-navbar">
         <mat-nav-list>
+            <button class="drawer-button" (click)="drawer.toggle()">
+                <i class="bi bi-chevron-left"></i>
+            </button>
             <div class="list-sections">
-                <a mat-list-item routerLink="/dashboard" routerLinkActive="activebutton">
+                <a mat-list-item routerLink="/dashboard" routerLinkActive="activebutton" [routerLinkActiveOptions]="{exact:
+                    true}">
                     <div class="list-containers">
                         <i class="bi bi-house-door"></i>
                         <span>Dashboard</span>
@@ -85,6 +89,9 @@
             </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>
+        <button class="drawer-button" (click)="drawer.toggle()">
+            <i class="bi bi-chevron-right"></i>
+        </button>
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>

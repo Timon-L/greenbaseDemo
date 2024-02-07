@@ -1,6 +1,6 @@
+@use '../../theme' as *;
+@use '../../variables' as vars;
 @use '@angular/material' as mat;
-@import '../../styles.scss';
-
 
 .side-navbar-container {
     height: 100%;
@@ -14,26 +14,21 @@
 }
 
 .side-navbar {
-  background-color: mat.get-theme-color($theme, primary, 50);
+  background-color: var(--background-primary, #eceff1);
 }
 
 .mat-drawer-content {
-  background-color: mat.get-theme-color($theme, primary, 50);
+  background-color: var(--background-primary, #eceff1);
 }
 
 .side-navbar-text {
   font-size: small;
-  color: grey;
+  color: rgb(197, 189, 203);
   margin-left: 16px;
 }
 
 .list-sections {
   margin-bottom: 3rem;
-}
-
-.list-sections a[mat-list-item] {
-  height: 2.5rem;
-  font-size: 1rem;
 }
 
 .list-sections a[mat-list-item] i {
@@ -49,20 +44,51 @@
   transform: scaleX(-1) translateX(45%);
 }
 
-@media screen and (max-width: 799px) {
-  .lrgScreen-items {
-      display: none;
+.drawer-button {
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.drawer-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.activebutton{
+  background-color: mat.get-color-from-palette($custom-primary, 800);
+
+  span {
+    color: vars.$accent-contrast;
   }
-  .smlScreen-items {
-      display: block;
+
+  i {
+    color: gray;
   }
 }
 
-@media screen and (min-width: 800px) {
-  .lrgScreen-items {
-      display: block;
+@media screen and (max-width: 959px) {
+  .drawer-button {
+    display: inline-flex;
   }
-  .smlScreen-items {
-      display: none;
+  .list-sections a[mat-list-item] {
+    height: 2rem;
+    font-size: 1rem;
+   }
+}
+
+@media screen and (min-width: 960px) {
+  .drawer-button {
+    display: none;
+  }
+  .list-sections a[mat-list-item] {
+    height: 2.5ren;
+    font-size: 1.5rem;
   }
 }

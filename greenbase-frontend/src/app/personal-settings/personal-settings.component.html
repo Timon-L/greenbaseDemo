@@ -1,0 +1,26 @@
+<div class="settings-page">
+    <div class="settings-header">
+        <h1>Settings</h1>
+        <button class="cancel-button">Cancel</button>
+        <button class="save-button">Save</button>
+    </div>
+    <mat-tab-group class="settings-tabs">
+        <mat-tab label="Profile">
+            <app-profile-settings></app-profile-settings>
+        </mat-tab>
+        <mat-tab label="Notifications">
+            <app-notifications-settings></app-notifications-settings>
+        </mat-tab>
+        <mat-tab label="Account">
+            <app-account-settings></app-account-settings>
+        </mat-tab>
+        <mat-tab label="Security">
+            <app-security-settings></app-security-settings>
+        </mat-tab>
+    </mat-tab-group>
+    <mat-divider></mat-divider>
+    <div class="settings-footer">
+        <button class="cancel-button">Cancel</button>
+        <button class="save-button">Save</button>
+    </div>
+</div>

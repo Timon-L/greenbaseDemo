@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
+import { PersonalSettingsComponent } from './personal-settings/personal-settings.component';
 
 export const routes: Routes = [
     {path: 'dashboard', component: PlaceholderComponent},
@@ -12,7 +13,7 @@ export const routes: Routes = [
     {path: 'index', component: PlaceholderComponent},
     {path: 'knowledge-base', component: PlaceholderComponent},
     {path: 'product-updates', component: PlaceholderComponent},
-    {path: 'personal-settings', component: PlaceholderComponent},
+    {path: 'personal-settings', component: PersonalSettingsComponent},
     {path: 'global-settings', component: PlaceholderComponent},
     {path: '**', component: PlaceholderComponent}
 ];

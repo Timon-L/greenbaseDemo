@@ -1,28 +1,8 @@
-@use '@angular/material' as mat;
-@use '_theme-variables.scss' as themeVars;
+@use 'theme' as *;
+@use 'variables' as vars;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
 @import "bootstrap-icons/font/bootstrap-icons.css";
-
-@include mat.core();
-
-$typography: mat.define-typography-config(
-  $font-family: 'Poppins, Roboto, Arial, sans-serif'
-);
-
-$theme: mat.define-light-theme(
-  (
-    color: (
-      primary: themeVars.$modernize-primary,
-      accent: themeVars.$accent,
-      warn: themeVars.$warn,
-    ),
-    typography: $typography,
-  )
-);
-
-@include mat.all-component-typographies($theme);
-@include mat.core-theme($theme);
 
 :root {
   --nav-height: 70px;
@@ -34,13 +14,9 @@ html, body {
 
 body {
   margin: 0;
-  background: mat.get-theme-color($theme, primary, 50);
+  background-color: var(--background-primary, #eceff1);
 }
 
 .bi {
   font-size: 1.5rem;
-}
-
-.mat-menu-panel {
-  background: white;
 }

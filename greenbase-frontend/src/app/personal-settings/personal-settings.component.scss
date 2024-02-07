@@ -1,0 +1,77 @@
+@use '../../theme' as *;
+@use '@angular/material' as mat;
+@use '../../variables' as vars;
+
+.settings-page {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    gap: 24px;
+
+    .settings-header,
+    .settings-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+
+        h1 {
+            flex-grow: 1;
+            font-weight: 700;
+        }
+
+        button {
+            border: none;
+            padding: 8px 16px;
+            height: 32px;
+            width: 72px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+
+    mat-tab-group {
+        background-color: white;
+        flex-grow: 1;
+        border-radius: 4px;
+    }
+
+    mat-divider {
+        border-top-color: vars.$border-color;
+    }
+
+    .settings-footer {
+        margin-top: auto;
+    }
+
+    .cancel-button {
+        background-color: vars.$accent-contrast;
+        border: 1px solid vars.$border-color;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        color: mat.get-color-from-palette($custom-primary, 700);
+        padding: 8px 16px;
+        height: 32px;
+        width: 64px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .save-button {
+        background-color: mat.get-color-from-palette($custom-primary, 700);
+        border: none;
+        color: vars.$accent-contrast;
+        padding: 8px 16px;
+        height: 32px;
+        width: 64px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: mat.get-color-from-palette($accent, 500);
+        }
+    }
+}
