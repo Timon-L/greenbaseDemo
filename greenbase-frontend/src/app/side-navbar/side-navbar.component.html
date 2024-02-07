@@ -14,8 +14,11 @@
                 </a>
                 <a mat-list-item routerLink="/orders" routerLinkActive="activebutton">
                     <div class="list-containers">
-                        <i class="bi bi-list-task"></i>
-                        <span>Orders</span>
+                        <div class="badge-container">
+                            <i class="bi bi-list-task"></i>
+                            <span>Orders</span>
+                            <span matBadgeOverlap="false" class="badge-style">{{userData.orders}}</span>
+                        </div>
                     </div>
                 </a>
                 <a mat-list-item routerLink="/products" routerLinkActive="activebutton">
@@ -86,7 +89,7 @@
                     </div>
                 </a>
             </div>
-            </mat-nav-list>
+        </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>
         <button class="drawer-button" (click)="drawer.toggle()">

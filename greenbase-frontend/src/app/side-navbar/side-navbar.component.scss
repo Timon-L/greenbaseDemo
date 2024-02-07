@@ -3,14 +3,16 @@
 @use '@angular/material' as mat;
 
 .side-navbar-container {
-    height: 100%;
-    border: 1px solid #ecdcdc;
-    .mat-drawer {
-      width: 240px;
-    }
-    .mat-drawer-content {
-      padding: 20px;
-    }
+  height: 100%;
+  border: 1px solid #ecdcdc;
+
+  .mat-drawer {
+    width: 240px;
+  }
+
+  .mat-drawer-content {
+    padding: 20px;
+  }
 }
 
 .side-navbar {
@@ -61,7 +63,7 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.activebutton{
+.activebutton {
   background-color: mat.get-color-from-palette($custom-primary, 800);
 
   span {
@@ -73,20 +75,50 @@
   }
 }
 
+.mat-badge-content {
+  background: black !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 0 6px !important;
+}
+
+.badge-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .badge-style {
+    margin-left: 8px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    padding: 0 6px;
+    font-size: 0.75rem;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px; 
+    margin-left: 72px;
+  }
+}
+
 @media screen and (max-width: 959px) {
   .drawer-button {
     display: inline-flex;
   }
+
   .list-sections a[mat-list-item] {
     height: 2rem;
     font-size: 1rem;
-   }
+  }
 }
 
 @media screen and (min-width: 960px) {
   .drawer-button {
     display: none;
   }
+
   .list-sections a[mat-list-item] {
     height: 2.5ren;
     font-size: 1.5rem;
