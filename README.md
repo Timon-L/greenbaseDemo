@@ -8,8 +8,8 @@ This project involves the conversion of a settings page UI design from Figma int
 ### Settings Profile Page & Notifications Page Conversion:<br />
 ![demo of settings page](https://github.com/Timon-L/greenbaseDemo/blob/main/settings_page.gif)
 
-### Minising page and dropdown menu:<br />
-![demo of minising page and dropdown menu](https://github.com/Timon-L/greenbaseDemo/blob/main/responsive.gif)
+### Minimising page and dropdown menu:<br />
+![demo of minimising page and dropdown menu](https://github.com/Timon-L/greenbaseDemo/blob/main/responsive.gif)
 
 
 Replace path-to-image/ with the actual path to your screenshots in the repository.
