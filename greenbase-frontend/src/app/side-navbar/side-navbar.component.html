@@ -1,0 +1,21 @@
+<mat-drawer-container class="side-navbar-container">
+    <mat-drawer mode="side" opened="true" class="side-navbar">
+        <mat-nav-list>
+            <a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            <a mat-list-item routerLink="/orders" routerLinkActive="active">Orders</a>
+            <a mat-list-item routerLink="/products" routerLinkActive="active">Products</a>
+            <a mat-list-item routerLink="/categories" routerLinkActive="active">Categories</a>
+            <a mat-list-item routerLink="/customers" routerLinkActive="active">Customers</a>
+            <a mat-list-item routerLink="/reports" routerLinkActive="active">Reports</a>
+            <a mat-list-item routerLink="/coupons" routerLinkActive="active">Coupons</a>
+            <a mat-list-item routerLink="/inbox" routerLineActive="active">Inbox</a>
+            <a mat-list-item routerLink="/knowledge-base" routerLinkActive="active">Knowledge Base</a>
+            <a mat-list-item routerLink="/product-updates" routerLinkActive="active">Product Updates</a>
+            <a mat-list-item routerLink="/personal-settings" routerLinkActive="active">Personal Settings</a>
+            <a mat-list-item routerLink="/global-settings" routerLinkActive="active">Global Settings</a>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

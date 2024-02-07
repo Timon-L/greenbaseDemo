@@ -1,0 +1,9 @@
+.side-navbar-container {
+    height: 100%; /* Full height of its parent */
+    .mat-drawer {
+      width: 200px; /* Example width */
+    }
+    .mat-drawer-content {
+      padding: 20px; /* Optional: space for content */
+    }
+  }

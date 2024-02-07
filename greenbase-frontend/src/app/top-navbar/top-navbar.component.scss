@@ -1,56 +1,7 @@
 #TopNavbar {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     background-color: white;
     height: var(--nav-height);
-}
-
-#Title {
-    margin: 0;
-    margin-right: 10rem;
-    font-weight: 600;
-}
-
-#Icon {
-    margin-left: 30px;
-    margin-right: 10px;
-}
-
-@media (max-width: 600px) {
-    #Icon {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    #Title {
-        margin-right: 1rem;
-    }
-}
-
-.custom-search-input {
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    background-color: transparent;
-}
-
-.custom-search-input i.material-icons {
-    color: #666;
-    margin-right: 8px;
-}
-
-.custom-search-input input[type="text"] {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    width: 100%;
-}
-
-.custom-search-input input::placeholder {
-    color: #aaa;
-}
-
-.material-symbols-outlined {
-    font-size: 1rem;
 }

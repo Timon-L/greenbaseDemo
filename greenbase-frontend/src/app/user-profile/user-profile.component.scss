@@ -1,0 +1,57 @@
+#user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-image-button {
+    border: none;
+    background: none; 
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.profile-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 100;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mat-icon-button {
+    line-height: 0;
+}
+
+.mat-icon {
+    width: 24px;
+    height: 24px;
+}
+
+@media screen and (max-width: 799px) {
+    .lrgScreen-items {
+        display: none;
+    }
+    .smlScreen-items {
+        display: block;
+    }
+}
+  
+@media screen and (min-width: 800px) {
+    .lrgScreen-items {
+        display: block;
+    }
+    .smlScreen-items {
+        display: none;
+    }
+}
+
