@@ -1,9 +1,68 @@
+@use '@angular/material' as mat;
+@import '../../styles.scss';
+
+
 .side-navbar-container {
-    height: 100%; /* Full height of its parent */
+    height: 100%;
+    border: 1px solid #ecdcdc;
     .mat-drawer {
-      width: 200px; /* Example width */
+      width: 240px;
     }
     .mat-drawer-content {
-      padding: 20px; /* Optional: space for content */
+      padding: 20px;
     }
+}
+
+.side-navbar {
+  background-color: mat.get-theme-color($theme, primary, 50);
+}
+
+.mat-drawer-content {
+  background-color: mat.get-theme-color($theme, primary, 50);
+}
+
+.side-navbar-text {
+  font-size: small;
+  color: grey;
+  margin-left: 16px;
+}
+
+.list-sections {
+  margin-bottom: 3rem;
+}
+
+.list-sections a[mat-list-item] {
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.list-sections a[mat-list-item] i {
+  padding-right: 1rem;
+}
+
+.list-containers {
+  display: flex;
+  align-items: center;
+}
+
+.flipped-horizontal {
+  transform: scaleX(-1) translateX(45%);
+}
+
+@media screen and (max-width: 799px) {
+  .lrgScreen-items {
+      display: none;
   }
+  .smlScreen-items {
+      display: block;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .lrgScreen-items {
+      display: block;
+  }
+  .smlScreen-items {
+      display: none;
+  }
+}

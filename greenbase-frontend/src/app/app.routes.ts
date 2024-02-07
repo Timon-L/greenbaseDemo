@@ -14,4 +14,5 @@ export const routes: Routes = [
     {path: 'product-updates', component: PlaceholderComponent},
     {path: 'personal-settings', component: PlaceholderComponent},
     {path: 'global-settings', component: PlaceholderComponent},
+    {path: '**', component: PlaceholderComponent}
 ];

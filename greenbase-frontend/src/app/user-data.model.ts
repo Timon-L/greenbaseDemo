@@ -3,4 +3,5 @@ export class UserData {
     email: string = '';
     notifications: number = 0;
     imageUrl?: string = '';
+    orders: number = 0;
 }

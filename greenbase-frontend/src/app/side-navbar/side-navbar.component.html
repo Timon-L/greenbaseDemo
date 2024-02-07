@@ -1,19 +1,88 @@
-<mat-drawer-container class="side-navbar-container">
+<mat-drawer-container class="side-navbar-container" autosize>
     <mat-drawer mode="side" opened="true" class="side-navbar">
         <mat-nav-list>
-            <a mat-list-item routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-            <a mat-list-item routerLink="/orders" routerLinkActive="active">Orders</a>
-            <a mat-list-item routerLink="/products" routerLinkActive="active">Products</a>
-            <a mat-list-item routerLink="/categories" routerLinkActive="active">Categories</a>
-            <a mat-list-item routerLink="/customers" routerLinkActive="active">Customers</a>
-            <a mat-list-item routerLink="/reports" routerLinkActive="active">Reports</a>
-            <a mat-list-item routerLink="/coupons" routerLinkActive="active">Coupons</a>
-            <a mat-list-item routerLink="/inbox" routerLineActive="active">Inbox</a>
-            <a mat-list-item routerLink="/knowledge-base" routerLinkActive="active">Knowledge Base</a>
-            <a mat-list-item routerLink="/product-updates" routerLinkActive="active">Product Updates</a>
-            <a mat-list-item routerLink="/personal-settings" routerLinkActive="active">Personal Settings</a>
-            <a mat-list-item routerLink="/global-settings" routerLinkActive="active">Global Settings</a>
-        </mat-nav-list>
+            <div class="list-sections">
+                <a mat-list-item routerLink="/dashboard" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-house-door"></i>
+                        <span>Dashboard</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/orders" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-list-task"></i>
+                        <span>Orders</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/products" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-tag flipped-horizontal"></i>
+                        <span>Products</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/categories" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-folder"></i>
+                        <span>Categories</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/customers" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-people"></i>
+                        <span>Customers</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/reports" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-bar-chart-line"></i>
+                        <span>Reports</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/coupons" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-star"></i>
+                        <span>Coupons</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/inbox" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span>Inbox</span>
+                    </div>
+                </a>
+            </div>
+            <div class="list-sections">
+                <p class="side-navbar-text">Other information</p>
+                <a mat-list-item routerLink="/knowledge-base" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-question-circle"></i>
+                        <span>Knowledge Base</span>
+                    </div>
+
+                </a>
+                <a mat-list-item routerLink="/product-updates" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-award"></i>
+                        <span>Product Updates</span>
+                    </div>
+                </a>
+            </div>
+            <div class="list-sections">
+                <p class="side-navbar-text">Settings</p>
+                <a mat-list-item routerLink="/personal-settings" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-person"></i>
+                        <span>Personal Settings</span>
+                    </div>
+                </a>
+                <a mat-list-item routerLink="/global-settings" routerLinkActive="activebutton">
+                    <div class="list-containers">
+                        <i class="bi bi-gear"></i>
+                        <span>Global Settings</span>
+                    </div>
+                </a>
+            </div>
+            </mat-nav-list>
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet>

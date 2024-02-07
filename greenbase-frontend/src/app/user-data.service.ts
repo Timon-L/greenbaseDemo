@@ -10,7 +10,8 @@ export class UserDataService {
     name: 'Alex Smith',
     email: 'AlexSmith@gmail.com',
     notifications: 10,
-    imageUrl: './assets/avataaars.png'
+    imageUrl: './assets/avataaars.png',
+    orders: 16
   });
   currentUserData = this.userDataSource.asObservable();
 
@@ -25,7 +26,8 @@ export class UserDataService {
       name: '',
       email: '',
       notifications: 0,
-      imageUrl: ''
+      imageUrl: '',
+      orders: 0
     });
   }
 }

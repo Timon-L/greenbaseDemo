@@ -1,21 +1,23 @@
 <div id="user-profile">
     <button mat-icon-button class="lrgScreen-items">
-        <mat-icon aria-hidden="false">chat</mat-icon>
+        <i class="bi bi-chat-left-text"></i>
     </button>
     <button mat-icon-button class="lrgScreen-items">
-        <mat-icon [matBadge]="userData.notifications" aria-hidden="false">notifications</mat-icon>
+        <div [matBadge]="userData.notifications" matBadgeSize="medium">
+            <i class="bi bi-bell"></i>
+        </div>
     </button>
     <button *ngIf="userData.imageUrl; else defaultIcon" class="profile-image-button lrgScreen-items">
         <img [src]="userData.imageUrl" alt="Profile" class="profile-image">
     </button>
     <ng-template #defaultIcon>
         <button mat-icon-button class="profile-image-button lrgScreen-items">
-            <mat-icon>face</mat-icon>
+            <i class="bi bi-person-circle"></i>
         </button>
     </ng-template>
     <p class="username lrgScreen-items">{{userData.name}}</p>
     <button mat-icon-button [matMenuTriggerFor]="userMenu" class="lrgScreen-items">
-        <mat-icon>keyboard_arrow_down</mat-icon>
+        <i class="bi bi-chevron-down"></i>
     </button>
     <button mat-icon-button [matMenuTriggerFor]="userMenu" class="smlScreen-items">
         <mat-icon>menu</mat-icon>
