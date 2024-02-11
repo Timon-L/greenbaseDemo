@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NotificationsSettingsComponent } from '../notifications-settings/notifications-settings.component';
 import { AccountSettingsComponent } from '../account-settings/account-settings.component';
 import { SecuritySettingsComponent } from '../security-settings/security-settings.component';
@@ -14,5 +14,9 @@ import {MatDividerModule} from '@angular/material/divider';
   styleUrl: './personal-settings.component.scss'
 })
 export class PersonalSettingsComponent {
+  @ViewChild(ProfileSettingsComponent) profileSettingsComponent!: ProfileSettingsComponent;
 
+  saveMethod(): void {
+    this.profileSettingsComponent.saveSettings();
+  }
 }

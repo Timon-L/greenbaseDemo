@@ -2,11 +2,11 @@
     <div class="settings-header">
         <h1>Settings</h1>
         <button class="cancel-button">Cancel</button>
-        <button class="save-button">Save</button>
+        <button class="save-button" (click)="saveMethod()">Save</button>
     </div>
     <mat-tab-group class="settings-tabs mat-tab-fill-height" mat-stretch-tabs="false" mat-align-tabs="start">
         <mat-tab label="Profile">
-            <app-profile-settings></app-profile-settings>
+            <app-profile-settings (saveRequested)="saveMethod()"></app-profile-settings>
         </mat-tab>
         <mat-tab label="Notifications">
             <app-notifications-settings></app-notifications-settings>
@@ -21,6 +21,6 @@
     <mat-divider></mat-divider>
     <div class="settings-footer">
         <button class="cancel-button">Cancel</button>
-        <button class="save-button">Save</button>
+        <button class="save-button" (click)="saveMethod()">Save</button>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { CommonModule } from '@angular/common';
@@ -103,7 +103,6 @@ export class ProfileSettingsComponent implements OnInit{
   clear(): void {
     this.imageSrc = null;
   }
-
 
   saveSettings(): void {
     const updatedUserData: UserData = {
